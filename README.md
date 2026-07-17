@@ -21,7 +21,7 @@ portal-aegis-idexud-demo/
 | HTML base desde Sandor v2.18.0 | ✅ Listo |
 | Branding IDEXUD completo (título, consecutivos, datos demo) | ✅ Aplicado |
 | Firebase config | ⏳ Pendiente – reemplazar placeholders |
-| Webhook Make | ⏳ Pendiente – reemplazar placeholder |
+| Webhook Make | ✅ Configurado – hook.us2.make.com/sh9iqa5... |
 | GitHub Pages / deploy | ⏳ Pendiente |
 
 ---
