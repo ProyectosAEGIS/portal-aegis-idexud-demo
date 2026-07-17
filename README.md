@@ -19,7 +19,7 @@ portal-aegis-idexud-demo/
 | Item | Estado |
 |------|--------|
 | HTML base desde Sandor v2.18.0 | ✅ Listo |
-| Branding IDEXUD (título, consecutivos) | ✅ Aplicado |
+| Branding IDEXUD completo (título, consecutivos, datos demo) | ✅ Aplicado |
 | Firebase config | ⏳ Pendiente – reemplazar placeholders |
 | Webhook Make | ⏳ Pendiente – reemplazar placeholder |
 | GitHub Pages / deploy | ⏳ Pendiente |
@@ -67,7 +67,7 @@ const WEBHOOK_URL = "https://hook.us2.make.com/TU_WEBHOOK_IDEXUD";
 | Prefijo consecutivos | `generarConsecutivoLocal()` | `IDEXUD-COT-` |
 | Nombre cliente en normalizador | `unificarNombreEmpresa()` | `IDEXUD - U. DISTRITAL` |
 | Nombre en Centro de Ayuda | sección `soporte` | `Portal IDEXUD` |
-| PIN de acceso Director | constante `MASTER_PIN` | `2025` (cambiar en producción) |
+| PIN de acceso Director | constante `MASTER_PIN` | `2025` (cambiar en producción) | | Email director CC | `IDEXUD_EMAIL_DIRECTOR_PLACEHOLDER` | Email director IDEXUD | | Email asesor CC | `IDEXUD_EMAIL_ASESOR_PLACEHOLDER` | Email asesor IDEXUD |
 
 ---
 
