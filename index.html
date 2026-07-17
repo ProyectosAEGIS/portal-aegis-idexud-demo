@@ -794,7 +794,7 @@
                     };
                 } catch (error) {
                     console.error("Fallo crítico en subida a Storage:", error);
-                    return { name: file.name, size: file.size, contentType: file.type, downloadURL: null, fullPath: null, error: error.message };
+                    return { name: file.name, size: file.size, contentType: file.type, downloadURL: null, fullPath: null };
                 }
             };
 
