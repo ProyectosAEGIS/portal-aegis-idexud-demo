@@ -1148,7 +1148,11 @@
                             const res = await fetch(WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
                             if (!res.ok) console.warn('Webhook respondio con status:', res.status);
                             
-                            showAlert('Éxito', "✅ ¡Pre-Orden guardada exitosamente! El equipo AEGIS ha sido notificado.");
+                            showAlert('Éxito', `✅ ¡Pre-Orden guardada exitosamente!
+
+📋 Consecutivo asignado: ${consecutivo}
+
+El equipo AEGIS ha sido notificado y gestionará tu solicitud.`);
                             
                             // MODIFICACIÓN V2.18.1: Los campos SOLO se limpian si el Webhook responde OK (HTTP 200)
                             setInterno({ solicitante: '', solicitanteEmail: '', asunto: '', tipos: { cumplimientoEstatales: false, cumplimientoParticulares: false, disposicionLegal: false, prorroga: false, responsabilidadCivil: false, seriedadOferta: false, otros: false }, archivos: [] });
