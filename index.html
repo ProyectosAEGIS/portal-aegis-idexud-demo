@@ -94,8 +94,8 @@
         ];
 
         const defaultCarteraData = [
-            { tomador: "SARUPETROL SAS", beneficiario: "INST. UNIV. COLEGIO MAYOR DE ANTIOQUIA", ramo: "CUMPLIMIENTO", poliza: "100029109", dias: 26, total: 92582 },
-            { tomador: "ELITE FACILITY MANAGEMENT SAS", beneficiario: "UNIVERSIDAD NACIONAL SEDE ORINOQUIA", ramo: "CUMPLIMIENTO", poliza: "100110019", dias: 23, total: 59500 }
+            { tomador: "TOMADOR DEMO IDEXUD", beneficiario: "IDEXUD DEMO BENEFICIARIO 1", ramo: "CUMPLIMIENTO", poliza: "IDEXUD-POL-001", dias: 26, total: 92582 },
+            { tomador: "ELITE FACILITY MANAGEMENT SAS", beneficiario: "IDEXUD DEMO BENEFICIARIO 2", ramo: "CUMPLIMIENTO", poliza: "IDEXUD-POL-002", dias: 23, total: 59500 }
         ];
 
         function formatCurrency(amount) {
@@ -143,8 +143,8 @@
         function unificarNombreEmpresa(nombre) {
             if (!nombre) return 'Sin Cliente';
             let norm = String(nombre).toUpperCase().trim();
-            if (norm.includes('ELITE FACILITY')) return 'ELITE FACILITY MANAGEMENT S.A.S.';
-            if (norm.includes('SARUPETROL')) return 'SARUPETROL S.A.S.';
+            if (norm.includes('IDEXUD')) return 'IDEXUD - U. DISTRITAL';
+            if (norm.includes('TOMADOR DEMO')) return 'TOMADOR DEMO IDEXUD S.A.S.';
             if (norm.includes('IDEXUD')) return 'IDEXUD - U. DISTRITAL';
             return norm.replace(/\./g, '')
                        .replace(/\bS A S\b/g, 'SAS')
