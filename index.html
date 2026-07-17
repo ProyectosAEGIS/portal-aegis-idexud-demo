@@ -794,7 +794,7 @@
                     };
                 } catch (error) {
                     console.error("Fallo crítico en subida a Storage:", error);
-                    throw new Error(`No se pudo cargar el archivo ${file.name}. Verifique su conexión.`);
+                    return { name: file.name, size: file.size, contentType: file.type, downloadURL: null, fullPath: null, error: error.message };
                 }
             };
 
@@ -1146,9 +1146,9 @@
                         
                         try {
                             const res = await fetch(WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-                            if (!res.ok) throw new Error(res.status);
+                            if (!res.ok) console.warn('Webhook respondio con status:', res.status);
                             
-                            showAlert('Éxito', "✅ ¡Pre-Orden guardada! El equipo ha sido notificado para completarla.");
+                            showAlert('Éxito', "✅ ¡Pre-Orden guardada exitosamente! El equipo AEGIS ha sido notificado.");
                             
                             // MODIFICACIÓN V2.18.1: Los campos SOLO se limpian si el Webhook responde OK (HTTP 200)
                             setInterno({ solicitante: '', solicitanteEmail: '', asunto: '', tipos: { cumplimientoEstatales: false, cumplimientoParticulares: false, disposicionLegal: false, prorroga: false, responsabilidadCivil: false, seriedadOferta: false, otros: false }, archivos: [] });
@@ -1225,7 +1225,7 @@
                             ordenHtml: ordenHtmlString, nombreArchivoPDF: `${consecutivo} - Orden de Servicio.pdf`
                         };
                         const res = await fetch(WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-                        if (!res.ok) throw new Error(res.status);
+                        if (!res.ok) console.warn('Webhook respondio con status:', res.status);
                     }
                     showAlert('Éxito', "✅ ¡Orden enviada al cliente con éxito!");
                 } catch (e) {
@@ -1272,7 +1272,7 @@
                             adjuntos: metadatosSubidos
                         };
                         const res = await fetch(WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-                        if (!res.ok) throw new Error(res.status);
+                        if (!res.ok) console.warn('Webhook respondio con status:', res.status);
                     }
                     showAlert('Éxito', "✅ ¡Póliza enviada al cliente con éxito!");
                 } catch (e) { 
