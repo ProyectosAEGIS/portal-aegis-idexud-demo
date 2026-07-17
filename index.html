@@ -807,7 +807,7 @@
                     `   - ${a.nombre}: Vigencia ${a.desde || '-'} a ${a.hasta || '-'} (${a.dias} d) | V.Aseg: ${formatCurrency(a.valorAsegurado)} | Prima: ${formatCurrency(a.prima)}`
                 ).join('\n');
 
-                let resumen = `📋 *RESUMEN DE COTIZACIÓN - AEGIS INSURANCE*\n`;
+                let resumen = `📋 *RESUMEN DE COTIZACIÓN - IDEXUD*\n`;
                 resumen += `--------------------------------------------------\n`;
                 resumen += `🆔 *Consecutivo:* ${consecutivo}\n`;
                 resumen += `👤 *Solicitante:* ${interno.solicitante}\n`;
@@ -860,7 +860,7 @@
                 <div style="font-family:Arial,sans-serif; color:#1e293b; padding:40px; background:white; width:1000px; margin:0 auto; border:1px solid #eee;">
                     <div style="display:flex; justify-content:space-between; border-bottom:2px solid #1e3a8a; padding-bottom:20px; margin-bottom:20px;">
                         <div>
-                            <h1 style="margin:0; font-size:24px; color:#1e3a8a; font-weight:bold;">AEGIS INSURANCE</h1>
+                            <h1 style="margin:0; font-size:24px; color:#1e3a8a; font-weight:bold;">IDEXUD</h1>
                             <p style="margin:0; font-size:12px; color:#64748b; font-weight:bold; letter-spacing:1px;">PORTAL DE SERVICIOS</p>
                         </div>
                         <div style="text-align:right;">
@@ -965,7 +965,7 @@
                         </div>
                     </div>
                     <div style="margin-top:30px; text-align:center; font-size:11px; color:#64748b; border-top:1px solid #e2e8f0; padding-top:16px;">
-                        <strong style="color:#0f172a; font-size:12px;">AEGIS INSURANCE - PROTECCIÓN &amp; RESPALDO</strong><br>
+                        <strong style="color:#0f172a; font-size:12px;">IDEXUD - PROTECCIÓN &amp; RESPALDO</strong><br>
                         Documento generado automáticamente a través del Portal de Servicios. Operación exclusiva para Grupo Elite / Sandor.
                     </div>
                 </div>`;
@@ -1401,8 +1401,8 @@
                             <div className="flex items-center gap-3 px-2">
                                 <div className="w-8 h-8 rounded-full bg-[#58C9E8] flex items-center justify-center text-[#12334F] font-bold text-sm">GS</div>
                                 <div className="text-left flex-1">
-                                    <p className="text-sm font-semibold text-white leading-tight">Grupo Sandor</p>
-                                    <p className="text-xs text-[#58C9E8]">Cliente Corporativo</p>
+                                    <p className="text-sm font-semibold text-white leading-tight">Universidad Distrital</p>
+                                    <p className="text-xs text-[#58C9E8]">Francisco José de Caldas</p>
                                 </div>
                             </div>
                         </div>
@@ -1418,7 +1418,7 @@
                                 <button className="md:hidden text-gray-500 hover:text-[#163f73] p-1" onClick={() => setIsMobileMenuOpen(true)}>
                                     <MenuIcon size={26} />
                                 </button>
-                                <h2 className="text-xl font-bold text-[#163f73] hidden sm:block">Portal de Servicios AEGIS</h2>
+                                <h2 className="text-xl font-bold text-[#163f73] hidden sm:block">Portal de Servicios IDEXUD</h2>
                             </div>
                             <div className="flex items-center gap-4">
                                 <span className="text-sm text-gray-500 font-medium hidden md:block">
@@ -1447,7 +1447,7 @@
                             {/* ========================================================= */}
                             {activeMenu === 'inicio' && (
                                 <div className="p-4 md:p-8 pb-20 space-y-6 max-w-[1600px] mx-auto">
-                                    <h1 className="text-2xl font-bold text-[#163f73] mb-6">Dashboard de Operaciones AEGIS</h1>
+                                    <h1 className="text-2xl font-bold text-[#163f73] mb-6">Dashboard de Operaciones IDEXUD</h1>
                                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                                         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
                                             <p className="text-sm font-bold text-gray-500 uppercase tracking-wider">Solicitudes Activas</p>
@@ -1469,9 +1469,9 @@
                                         </div>
                                     </div>
                                     <div className="mt-8 bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-                                        <h2 className="text-xl font-bold text-[#163f73] mb-4">Bienvenido al entorno de Operaciones</h2>
+                                        <h2 className="text-xl font-bold text-[#163f73] mb-4">Bienvenido al Portal IDEXUD</h2>
                                         <p className="text-gray-600 text-sm leading-relaxed">
-                                            Usted se encuentra en el espacio de trabajo central de la SPA WEB-AEGIS (Versión 2.18.0).
+                                            Usted se encuentra en el espacio de trabajo central de la SPA WEB-IDEXUD (Versión 2.18.0).
                                             Utilice el menú lateral para acceder rápidamente al Cotizador Principal, o para visualizar los reportes unificados de Producción y Cartera, extraídos de manera dinámica y en tiempo real desde la Base de Datos central (Google Firestore).
                                         </p>
                                         <button onClick={() => setActiveMenu('cotizador')} className="mt-6 px-6 py-3 bg-[#163f73] text-white rounded-lg font-bold shadow-md hover:bg-[#12334F] transition-colors">
